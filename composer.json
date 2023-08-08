@@ -1,0 +1,35 @@
+{
+    "name": "bfg/admin-audit-notifications",
+    "description": "The audit notifications for bfg admin",
+    "type": "bfg-admin-extension",
+    "keywords": ["laravel", "bfg", "lte", "admin", "extension", "admin-audit-notifications"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Xsaven",
+            "email": "gms.sw.xsaven@gmail.com"
+        }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0|^8.1",
+        "bfg/admin": "^5.3.8",
+        "bfg/admin-notifications": "^0.1.0"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Admin\\Extend\\AdminAuditNotifications\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Admin\\Extend\\AdminAuditNotifications\\ServiceProvider"
+            ]
+        }
+    }
+}
